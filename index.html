@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body onload="loadProduct(), loadCategory(), getCartCount(), getWishListCount()">
+    <div id="overlay" onclick="closeSidePanel()"></div>
+    <div id="side-cart" class="w-[80%] sm:w-[450px] bg-white z-[999999] h-full fixed shadow-2xl">
+        <div class="text-center text-3xl py-3">Cart</div>
+        <hr class="mb-2">
+        <div id="side-cart-listing">
+
+        </div>
+    </div>
+    <div id="wishlist-cart" class="w-[80%] sm:w-[450px] bg-white z-[999999] h-full fixed shadow-2xl">
+        <div class="text-center text-3xl py-3">Wish List</div>
+        <hr class="mb-2">
+        <div id="wishlist-cart-listing">
+
+        </div>
+    </div>
+    <header class="shadow sticky top-0 bg-white z-[9999]">
+        <div class="container flex justify-center items-center gap-2 cursor-pointer">
+            <div onclick="sidePanel(1)">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">(0)</span>
+            </div>
+            <div onclick="sidePanel(2)">
+                <i class="fa-solid fa-heart"></i>
+                <span id="wishlist-count">(0)</span>
+            </div>
+        </div>
+    </header>
+    <div class="container md:grid grid-cols-5">
+        <div class="p-2">
+            <ul id="categoryListing" class="bg-white sticky top-[100px]">
+                <li onclick="categoryFilter(null)" class="border cursor-pointer px-2 py-3">All</li>
+            </ul>
+        </div>
+        <div class="col-span-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 p-2" id="listing">
+
+        </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/959eda728d.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

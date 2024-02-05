@@ -1,0 +1,53 @@
+.container {
+    max-width: 1240px !important;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.btn {
+    /* text-white p-3 hover:bg-white border hover:text-blue-400 hover:border-[blue-400] bg-blue-400 rounded cursor-pointer mb-2 ; */
+    color: white;
+    padding: 12px;
+    background-color: #60a5fa;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 500ms;
+}
+
+.btn:hover {
+    border: none;
+    color: #60a5fa;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgb(191, 190, 190);
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#side-cart {
+    transition: 400ms;
+    left: -100%;
+}
+#wishlist-cart {
+    transition: 400ms;
+    right: -100%;
+}
+.open-cart{
+    left: 0% !important;
+}
+.open-wish{
+    right: 0% !important;
+}
